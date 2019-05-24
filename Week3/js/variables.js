@@ -15,6 +15,9 @@ console.log("Hello World!");
 var helloworld; // variable is undefined
 console.log(helloworld);
 
+var helloword = null; // variable is defined, but with no value
+console.log(helloword);
+
 // Assigning values to variables
 helloworld = 5; // variable is a number without decimals
 console.log(helloworld);
