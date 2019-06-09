@@ -55,6 +55,7 @@
         <div class="navbar-nav flex-row p-0">
             <a id="frontend_link" href="#" class="nav-item nav-link active p-2">Front-End Web Dev</a>
             <a id="adobecc_link" href="#" class="nav-item nav-link p-2">Adobe CC</a>
+            <a id="youtube_link" href="#" class="nav-item nav-link p-2">Lecture Slides</a>
         </div>
     </nav>
     
@@ -441,11 +442,21 @@
             </div>
         </div>
     </div>
+    <div id="youtube_row" class="container-fluid" style="display: none;">
+        <div class="row">
+            <div class="col-7">
+                <iframe style="width:100%;height:750px;margin-top:25px;" src="https://www.youtube.com/embed/videoseries?list=PLWZDcy6SbCTsaL0hGQeWL9pua57iPpQ_t" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-5">
+                <iframe src="https://drive.google.com/embeddedfolderview?id=1JpWodck8FMFh6JK73Ausg3_eI5vqdL5t#list" style="width:100%;height:750px;margin-top:25px;" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
     
-    <!-- Footer Area -->
+    <!-- Footer Area 
     <nav class="navbar navbar-dark bg-secondary">
       
-    </nav>
+    </nav>-->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -456,32 +467,51 @@
     <script>
         var frontend_link = document.getElementById("frontend_link");
         var adobecc_link = document.getElementById("adobecc_link");
+        var youtube_link = document.getElementById("youtube_link");
         
         var frontend_row = document.getElementById("frontend_row");
         var adobecc_row = document.getElementById("adobecc_row");
+        var youtube_row = document.getElementById("youtube_row");
         
         console.log(frontend_link);
         console.log(adobecc_link);
+        console.log(youtube_link);
         console.log(frontend_row);
         console.log(adobecc_row);
+        console.log(youtube_row);
         
         frontend_link.addEventListener("click",Show_FrontEnd);
         adobecc_link.addEventListener("click",Show_AdobeCC);
+        youtube_link.addEventListener("click",Show_YouTube);
         
         function Show_FrontEnd(){
             frontend_row.style.display = "block";
             adobecc_row.style.display = "none";
+            youtube_row.style.display = "none";
             
             frontend_link.classList.add("active");
             adobecc_link.classList.remove("active");
+            youtube_link.classList.remove("active");
         }
         
         function Show_AdobeCC(){
             adobecc_row.style.display = "block";
             frontend_row.style.display = "none";
+            youtube_row.style.display = "none";
             
             adobecc_link.classList.add("active");
             frontend_link.classList.remove("active");
+            youtube_link.classList.remove("active");
+        }
+        
+        function Show_YouTube(){
+            youtube_row.style.display = "block";
+            frontend_row.style.display = "none";
+            adobecc_row.style.display = "none";
+            
+            youtube_link.classList.add("active");
+            frontend_link.classList.remove("active");
+            adobecc_link.classList.remove("active");
         }
     </script>
   </body>
